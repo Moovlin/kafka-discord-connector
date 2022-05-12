@@ -1,3 +1,4 @@
 FROM lensesio/fast-data-dev
 COPY pom.xml ./
-CMD ["cat", "pom.xml"]
+CMD ["mkdir", "/opt/landoop/connectors/third-party/kafka-connect-discord"]
+COPY target/discord-connect-0.1.5-SNAPSHOT-jar-with-dependencies.jar /opt/landoop/connectors/third-party/kafka-connect-discord/discord-connect-0.1.5.jar

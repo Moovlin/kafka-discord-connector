@@ -15,14 +15,15 @@ public class DiscordMessages {
 	private static final Logger log = LoggerFactory.getLogger(DiscordMessages.class);
 	private DiscordClient client;
 	
-	private Mono<Void> login;
+	public Mono<Void> login;
 	
 	private MessageBuffer messages;
 	
 	public DiscordMessages(MessageBuffer buffer, String token) {
 		this.messages = buffer;
 		this.client = DiscordClient.create(token);
-		
+
+
 		this.login = client.withGateway((GatewayDiscordClient gateway) -> 
 		gateway.on(MessageCreateEvent.class, event -> { 
 			Message message = event.getMessage();
@@ -30,6 +31,7 @@ public class DiscordMessages {
 			if(!message.getContent().isEmpty()) {
 				messages.addMessage(message);
 				log.info(message.getContent());
+				log.info("Buffer size is:\t" + Integer.toString(messages.getBufferSize()));
 			}
 			return Mono.empty();
 		}));

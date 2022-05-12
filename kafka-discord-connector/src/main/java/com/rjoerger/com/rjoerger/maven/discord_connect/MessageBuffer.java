@@ -26,4 +26,6 @@ public class MessageBuffer {
 	public boolean isEmpty() {
 		return messageList.isEmpty();
 	}
+
+	public int getBufferSize(){ return messageList.size(); }
 }
