@@ -12,12 +12,12 @@ The information on the above can be learned from the following [Discord4j Link](
 Run build.sh, assumes you have maven & docker running
 
 ## Running
-. docker-compose up
-. Navigate to http://127.0.0.1:3030
-. Open the "Kafka Connect UI" and click "Add"
-. Select "DiscordSourceConnector"
-. Fill in the "topic name" & "token"
-. Click "Create"
+1. docker-compose up
+1. Navigate to http://127.0.0.1:3030
+1. Open the "Kafka Connect UI" and click "Add"
+1. Select "DiscordSourceConnector"
+1. Fill in the "topic name" & "token"
+1. Click "Create"
 
 
 
