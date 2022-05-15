@@ -22,5 +22,14 @@ Run build.sh, assumes you have maven & docker running
 
 
 ## Status
-Currently, the connector launches and collects messages from Discord but is not actually dropping them into Kafka. This is likely due to the Discord4j API blocking the thread. 
+Currently, the connector launches and collects messages from Discord and now submits them into Kafka. AKA, we've reached
+MVP for this project. Messages now enter the defined kafka topic. 
+
+### Next Steps
+* Move the build process into Docker so that we can run "docker build" and everything just happens.  
+* Start moving more message information into Kafka. Currently, we just do the content, we don't actually collect who 
+ said it, when they said it, or other meta information
+* Focus a more "production" style launch for this image. IE: If we want to build an image which will just run with 
+things like token information, likely will require using a different base docker image
+* Once we've gotten to a more production style for the source connector
 
