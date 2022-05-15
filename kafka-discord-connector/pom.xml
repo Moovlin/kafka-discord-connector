@@ -6,7 +6,7 @@
 
   <groupId>com.rjoerger.com.rjoerger.maven</groupId>
   <artifactId>discord-connect</artifactId>
-  <version>0.1.5-SNAPSHOT</version>
+  <version>0.1.9-SNAPSHOT</version>
 
   <name>discord-connect</name>
   <!-- FIXME change it to the project's website -->
